@@ -102,6 +102,13 @@ Widget _Clima() {
           ),
         ),
         Container(
+            margin: EdgeInsets.symmetric(vertical: 10.0),
+            width: 3.0,
+            height: 95.0,
+            decoration: BoxDecoration(
+                color: Color.fromRGBO(216, 216, 216, 1.0),
+                borderRadius: BorderRadius.circular(8.0))),
+        Container(
           child: Column(
             children: <Widget>[
               Expanded(
@@ -187,7 +194,7 @@ Widget _Living() {
       height: 150.0,
       width: 350.0,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 244, 227, 225),
+          color: Color.fromARGB(255, 246, 235, 234),
           borderRadius: BorderRadius.circular(25.0)),
       child: Row(
         children: <Widget>[
@@ -221,7 +228,7 @@ Widget _Living() {
               children: <Widget>[
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.only(top: 25),
                     child: Text('Living Room',
                         textAlign: TextAlign.left,
                         style: TextStyle(
@@ -231,15 +238,25 @@ Widget _Living() {
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    child: Text('7 Devices',
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13.0)),
-                  ),
-                ),
+                    child: Row(
+                  children: [
+                    Container(
+                        // margin: EdgeInsets.symmetric(vertical: 10.0),
+                        width: 10.0,
+                        height: 10.0,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 255, 0, 0),
+                            borderRadius: BorderRadius.circular(8.0))),
+                    Container(
+                      child: Text(' 7 Devices',
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              fontWeight: FontWeight.w400,
+                              fontSize: 13.0)),
+                    ),
+                  ],
+                )),
               ],
             ),
           ),
@@ -267,7 +284,7 @@ Widget _Bed() {
       height: 150.0,
       width: 350.0,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 213, 239, 245),
+          color: Color.fromARGB(255, 219, 244, 249),
           borderRadius: BorderRadius.circular(25.0)),
       child: Row(
         children: <Widget>[
@@ -301,7 +318,7 @@ Widget _Bed() {
               children: <Widget>[
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.only(top: 25),
                     child: Text('Bed Room',
                         textAlign: TextAlign.left,
                         style: TextStyle(
@@ -311,21 +328,31 @@ Widget _Bed() {
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    child: Text('5 Devices',
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13.0)),
-                  ),
-                ),
+                    child: Row(
+                  children: [
+                    Container(
+                        // margin: EdgeInsets.symmetric(vertical: 10.0),
+                        width: 10.0,
+                        height: 10.0,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 59, 242, 252),
+                            borderRadius: BorderRadius.circular(8.0))),
+                    Container(
+                      child: Text(' 5 Devices',
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              fontWeight: FontWeight.w400,
+                              fontSize: 13.0)),
+                    ),
+                  ],
+                )),
               ],
             ),
           ),
           Container(
             child: Switch(
-              value: null,
+              value: false,
               overlayColor: null,
               trackColor: null,
               inactiveThumbColor: Color.fromARGB(255, 114, 225, 242),
@@ -348,7 +375,7 @@ Widget _Bath() {
       height: 150.0,
       width: 350.0,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 250, 249, 185),
+          color: Color.fromARGB(255, 250, 249, 194),
           borderRadius: BorderRadius.circular(25.0)),
       child: Row(
         children: <Widget>[
@@ -382,7 +409,7 @@ Widget _Bath() {
               children: <Widget>[
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.only(top: 25),
                     child: Text('Bath Room',
                         textAlign: TextAlign.left,
                         style: TextStyle(
@@ -392,21 +419,31 @@ Widget _Bath() {
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    child: Text('4 Devices',
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13.0)),
-                  ),
-                ),
+                    child: Row(
+                  children: [
+                    Container(
+                        // margin: EdgeInsets.symmetric(vertical: 10.0),
+                        width: 10.0,
+                        height: 10.0,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 255, 155, 62),
+                            borderRadius: BorderRadius.circular(8.0))),
+                    Container(
+                      child: Text(' 4 Devices',
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              fontWeight: FontWeight.w400,
+                              fontSize: 13.0)),
+                    ),
+                  ],
+                )),
               ],
             ),
           ),
           Container(
             child: Switch(
-              value: null,
+              value: false,
               overlayColor: null,
               trackColor: null,
               inactiveThumbColor: Color.fromARGB(255, 255, 252, 78),
