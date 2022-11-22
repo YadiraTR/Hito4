@@ -54,6 +54,7 @@ flutter:
    - assets/img/cama.png
    - assets/img/banera.png
    - assets/img/living.png
+   - assets/img/p1.png
 
   fonts:
     - family: OpenSans

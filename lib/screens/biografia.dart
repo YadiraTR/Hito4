@@ -189,44 +189,72 @@ Widget _Living() {
       decoration: BoxDecoration(
           color: Color.fromARGB(255, 244, 227, 225),
           borderRadius: BorderRadius.circular(25.0)),
-      child: Row(children: <Widget>[
-        Expanded(
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              shape: CircleBorder(),
-              padding: EdgeInsets.all(5.0),
-              backgroundColor: Color.fromARGB(
-                  255, 222, 253, 250), // background (button) color
-              foregroundColor:
-                  Color.fromARGB(255, 0, 180, 129), // foreground (text) color
-            ), // ignore
-            onPressed: () {},
-            child: Padding(
-              padding:
-                  EdgeInsets.only(left: 16.0, right: 16.0, top: 8, bottom: 8),
-              child: ClipOval(
-                child: Image.asset(
-                  'assets/img/banera.png',
-                  width: 90,
-                  height: 90,
-                  fit: BoxFit.cover,
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                padding: EdgeInsets.all(5.0),
+                backgroundColor: Color.fromARGB(
+                    255, 255, 255, 255), // background (button) color
+                foregroundColor:
+                    Color.fromARGB(255, 0, 45, 180), // foreground (text) color
+              ), // ignore
+              onPressed: () {},
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: 16.0, right: 16.0, top: 8, bottom: 8),
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/img/banera.png',
+                    width: 90,
+                    height: 90,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-        Container(
-          child: Switch(
-          value:null,
-          overlayColor: null,
-          trackColor:null,
-          thumbColor: MaterialStateProperty.all<Color>(Colors.black),
-          onChanged: (bool value) {
-          SetState(() {
-          light = value;
-        },);},
-        ),
-      ],),
+          Container(
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    child: Text('Living Room',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0)),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    child: Text('7 Devices',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.w400,
+                            fontSize: 13.0)),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            child: Switch(
+              value: null,
+              overlayColor: null,
+              trackColor: null,
+              thumbColor: MaterialStateProperty.all<Color>(
+                  Color.fromARGB(255, 55, 113, 228)),
+              onChanged: (bool value) {},
+            ),
+          ),
+        ],
+      ),
     ),
   );
 }
@@ -236,36 +264,74 @@ Widget _Bed() {
     offset: Offset(0.0, -90.0),
     child: Container(
       padding: EdgeInsets.all(9.0),
-      height: 100.0,
+      height: 150.0,
       width: 350.0,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 170, 225, 247),
-          borderRadius: BorderRadius.circular(30.0)),
-      child: ListView(
-        padding: EdgeInsets.only(top: 24, left: 16, right: 16),
-        children: [
-          Center(
+          color: Color.fromARGB(255, 213, 239, 245),
+          borderRadius: BorderRadius.circular(25.0)),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                padding: EdgeInsets.all(5.0),
+                backgroundColor: Color.fromARGB(
+                    255, 255, 255, 255), // background (button) color
+                foregroundColor: Color.fromARGB(
+                    255, 65, 232, 244), // foreground (text) color
+              ), // ignore
+              onPressed: () {},
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: 16.0, right: 16.0, top: 8, bottom: 8),
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/img/cama.png',
+                    width: 90,
+                    height: 90,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Container(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Biografía',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w200,
-                        fontSize: 24.0)),
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    child: Text('Bed Room',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0)),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    child: Text('5 Devices',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.w400,
+                            fontSize: 13.0)),
+                  ),
+                ),
               ],
             ),
           ),
-          Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('M',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w200,
-                        fontSize: 18.0)),
-              ],
+          Container(
+            child: Switch(
+              value: null,
+              overlayColor: null,
+              trackColor: null,
+              inactiveThumbColor: Color.fromARGB(255, 114, 225, 242),
+              thumbColor: MaterialStateProperty.all<Color>(
+                  Color.fromARGB(255, 146, 241, 255)),
+              onChanged: (bool value) {},
             ),
           ),
         ],
@@ -279,36 +345,74 @@ Widget _Bath() {
     offset: Offset(0.0, -90.0),
     child: Container(
       padding: EdgeInsets.all(9.0),
-      height: 100.0,
+      height: 150.0,
       width: 350.0,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 253, 213, 167),
-          borderRadius: BorderRadius.circular(30.0)),
-      child: ListView(
-        padding: EdgeInsets.only(top: 24, left: 16, right: 16),
-        children: [
-          Center(
+          color: Color.fromARGB(255, 250, 249, 185),
+          borderRadius: BorderRadius.circular(25.0)),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                padding: EdgeInsets.all(5.0),
+                backgroundColor: Color.fromARGB(
+                    255, 255, 255, 255), // background (button) color
+                foregroundColor: Color.fromARGB(
+                    255, 240, 236, 97), // foreground (text) color
+              ), // ignore
+              onPressed: () {},
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: 16.0, right: 16.0, top: 8, bottom: 8),
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/img/banera.png',
+                    width: 90,
+                    height: 90,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Container(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Biografía',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w200,
-                        fontSize: 24.0)),
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    child: Text('Bath Room',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0)),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    child: Text('4 Devices',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.w400,
+                            fontSize: 13.0)),
+                  ),
+                ),
               ],
             ),
           ),
-          Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Mi nombre es Yadira Tirado Rome',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w200,
-                        fontSize: 18.0)),
-              ],
+          Container(
+            child: Switch(
+              value: null,
+              overlayColor: null,
+              trackColor: null,
+              inactiveThumbColor: Color.fromARGB(255, 255, 252, 78),
+              thumbColor: MaterialStateProperty.all<Color>(
+                  Color.fromARGB(255, 254, 251, 69)),
+              onChanged: (bool value) {},
             ),
           ),
         ],
